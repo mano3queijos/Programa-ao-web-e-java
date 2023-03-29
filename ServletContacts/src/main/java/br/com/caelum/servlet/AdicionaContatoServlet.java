@@ -2,6 +2,7 @@ package br.com.caelum.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.security.Provider.Service;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -23,10 +24,9 @@ public class AdicionaContatoServlet extends HttpServlet {
 	 */
 	private static final long serialVersionUID = 1L;
 
-	SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
-
+	
 	@Override
-	protected void service(HttpServletRequest request, HttpServletResponse response)
+	public void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 		PrintWriter out = response.getWriter();
